@@ -53,9 +53,6 @@ Assess your prediction using the [Cell Size and Scale Tool](https://learn.geneti
 
 </div>
 
-##### Solution  
-A, F, C, D, B, E
-
 
 
 
@@ -89,21 +86,17 @@ Bacteria are categorized by their shape and structure. You have learned that bac
 
 ![Comparison of Gram-positive bacteria to Gram-negative bacteria.](./Images/gram_stain.png)
 
-#### Question 1 {.tabset .tabset-fade .tabset-pills}
+#### Exercise 3 {.tabset .tabset-fade .tabset-pills}
 
-##### Question
+##### Exercise
 <style>
 div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 </style>
 <div class = "blue">
 
-Based on the figure above, what are the key differences between Gram-positive and Gram-negative bacteria?
+Based on the figure above, desrcibe the key differences between Gram-positive and Gram-negative bacteria?
 
 </div>  
-
-##### Solution
-
-Gram-positive bacteria have a thick cell wall that is composed of peptidoglycan. Gram-negative bacteria have a cell wall that is composed of a thin layer of peptidoglycan, surrounded by an outer membrane and lipopolysaccharaides. 
 
 
 
@@ -111,7 +104,8 @@ There are three basic shapes of bacteria: bacillus (rod-shaped), coccus (spheric
 
 ![Common shapes of bacteria.](./Images/bacterial_shapes.png)
 
-#### Exercise 3 {.tabset .tabset-fade .tabset-pills}
+
+#### Exercise 4 {.tabset .tabset-fade .tabset-pills}
 
 ##### Exercise
 <style>
@@ -125,11 +119,10 @@ The image below is a microscopic image of a culture of _Staphylococcus aureus_. 
 
 </div>  
 
-##### Solution
-_Staphylococcus aureus_ is a gram-positive coccus.
 
 
 # Viruses 
+
 Viruses are the smallest microbes and must infect a host cell in order to survive and replicate. These host cells may be cells from humans, plants, animals, or other microorganisms. 
 
 ![Examples of viruses. (a) The SARS-CoV02 virus infects and replicates inside human and animal cells, (b) The Tobacco Mosaic Virus infects and replicates inside a wide range of plants, especially tobacco, (c) The bacteriophage virus infects and replicates inside bacterial cell hosts.](./Images/examples_viruses.png)
@@ -163,9 +156,8 @@ All viruses are composed of genetic material and a protein coat, but viruses may
 
 ![Comparison of four different viruses, based on shape, genetic material, and outer coating.](./Images/compare_viruses.png)
 
-# Wrap-Up Exercise
 
-#### Exercise 4 {.tabset .tabset-fade .tabset-pills}
+#### Exercise 5 {.tabset .tabset-fade .tabset-pills}
 
 ##### Exercise
 <style>
@@ -173,6 +165,3 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 </style>
 <div class = "blue">
 How do viruses compare to other microorganisms? Generate a table to compare viruses to other microorganisms based on size, genetic material, structure, and reproduction.
-
-##### Solution
-![Comparison between viruses and other microorganisms.](./Images/virus_table.PNG)

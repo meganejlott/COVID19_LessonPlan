@@ -26,9 +26,8 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 Are viruses classifed as facultative or obligate pathogens? Why
 </div>  
 
-##### Solution
-ALL viruses are an obligate pathogen because they need the host's cellular machinery in order to reproduce  
-    
+
+ 
 # Microparasites  
 
 ## Bacteria  
@@ -51,9 +50,7 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 What are some methods suggested by public health officials to protect yourself against antibiotic resistance? You may want to use https://www.cdc.gov/antibiotic-use/index.html as a reference.
 </div>   
 
-##### Solution  
-Protect yourself and your family from antibiotic resistance by doing your best to stay healthy and keep others healthy. This includes washing your hands, covering coughs, staying home when you're feeling sick, and getting recommended vaccines and boosters, such as the flu vaccine. If you get sick, see a doctor! Never pressure them to give antibiotics. If you are prescribed antibiotics, take them exactly as the doctor recommends. Do not share antibiotics, save them for later, or take someone else's.  
-    
+
 ## Viruses  
 The term *virus* was originally used to describe diseases of unknown origin because many epidemics were caused by viruses before anyone understood the nature of viruses themselves. Viruses are not able to reproduce independently and need to hijack the cellular machinery of their host in order to replicate. 
 
@@ -90,12 +87,7 @@ TransEX %>% kable() %>% kable_styling(bootstrap_options = c("striped","hover"),
 ```
 </div>  
 
-##### Solution  
-Fecal-oral includes Cholera, E. coli, Hepititis, Giardia, Tape Worms  
-Respiratory includes Covid, common cold  
-Zoonotic includes Lyme disease, malaria, anthrax, hantavirus, leptospirosis  
-Sexual Contact includes syphilis, herpes, hepititis.  
-This is not a complete list, this has some of the common ones on it. Some diseases can be transmitted through more than one route.
+
 
 ### How Viruses Replicate  
 For DNA viruses, replication occurs in the nucleus of the cell. For RNA viruses, replication occurs in the cytoplasm. There are six general steps to replication, but the mechanisms vary by virus.  
@@ -125,8 +117,6 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 Find an example of a virus that causes an acute viral infection. Find an example of a virus that causes a persistent viral infection.
 </div>   
 
-##### Solution  
-Acute (flu, mumps, measles). Persistent (HIV->AIDS, chicken pox -> shingles)  
 
 ### Virulence  
 
@@ -148,11 +138,7 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 For each route of transmission (fecal-oral, respiratory, zoonotic, and sexual contact) what level of virulence do you think those pathogens would typically want to have? Why?
 </div>   
 
-##### Solution  
-The optimal virulence for all pathogens is moderate virulence. Pathogens that are moderately virulent may replicate readily in the host, but do not cause a severe disease. A severe disease may prevent transmission to new hosts. If a person is too sick, they may keep inside and away from new hosts. 
 
-Overall, there isn't a single correct answer. This is an exercise to the get the student thinking about virulence from the perspective of the pathogen instead of the host.  
-    
 ### Mutations  
 
 RNA viruses are known to use all known mechanisms of genetic variation to ensure survival. This constant genetic variation makes it hard for the host's immune system to detect the virus. A single host may have multiple versions of the pathogen at once; this can overwhlem the immune system. 
@@ -171,8 +157,6 @@ div.yellow { background-color:#FAED8E; border-radius: 5px; padding: 20px;}
 Given that there are 0.0003 mutations/base/round of replication in HIV. What is the average number of mutations in a single replication?
 </div>   
 
-##### Solution  
-0.0003 * 9749 = 2.9247 (average number of mutations in a single replication) 
 
 #### Question 7 {.tabset .tabset-fade .tabset-pills}
 
@@ -184,8 +168,6 @@ div.yellow { background-color:#FAED8E; border-radius: 5px; padding: 20px;}
 How many mutations across all replicates come from a single infected cell?
 </div>  
 
-##### Solution  
-2.9247 * 10000 = 29,247 mutations
 
 #### Question 8 {.tabset .tabset-fade .tabset-pills}
 
@@ -197,10 +179,6 @@ div.yellow { background-color:#FAED8E; border-radius: 5px; padding: 20px;}
 Knowing that the mutation rate is 0.0003 mutations/base/round, what percent of the 10,000 new HIV viruses will have at least 1 mutation in the envelope gene that is typically the target for host's immune system and for vaccines? (the envelope gene is 2,598 bases long)  
 </div>   
 
-##### Solution  
-0.0003 * 2,598 = 0.7794 proportion of mutations per replicate  
-  0.7794 * 10000 = 7794 replicates will have a mutation in the envelope protein  
-  (7794 / 10000) * 100 = 77.94% of virion produced will have at least 1 mutation in the envelope 
 
 #### Question 9 {.tabset .tabset-fade .tabset-pills}
 
@@ -212,5 +190,3 @@ div.yellow { background-color:#FAED8E; border-radius: 5px; padding: 20px;}
 Seeing the mutation rate of HIV and HIV's envelope protein, why do you think it has been difficult to create a cure for HIV?
 </div>   
 
-##### Solution
-The mutation rate for the virus is very high, with each replicate have almost 3 mutation, and typically one occuring in the envelope protein that is what the cure (like a vaccine) would target. Each person's immune system is likely have trouble being able to detect all of the different variants, creating a vaccine that is able to target all of the variants across all people is a huge undertaking. 

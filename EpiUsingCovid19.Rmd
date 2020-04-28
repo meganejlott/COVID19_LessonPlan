@@ -27,12 +27,6 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 Visit [The Corona Virus Map](https://www.nytimes.com/interactive/2020/world/coronavirus-maps.html), generated and updated by the New York Times. Reflect. What may account for the difference in the number of cases, or the burden of disease, between countries? 
 </div>
 
-##### Solution
-There are many factors that may contribute to the differences in the burden of disease of COVID-19 between countries. We summarize just a few factors here.   
-*Example 1.* The virus may have been introduced to different regions at different times. Different countries can be in different phases of the pandemic at any point in time. Even different parts of the same country can be in different phases of a pandemic. Countries with more recent introductions may have fewer cases on today’s date. The first case of COVID-19 in the U.S. was reported on January 21, 2020. The first case of COVID-19 in Papua New Guinea was reported on March 20, 2020.  
-*Example 2.* There may be more cases reported in countries with a higher population density, or number of susceptible individuals.  
-*Example 3.* Some countries may have responded early to the pandemic, enacting public health interventions to prevent the spread of disease.  
-*Example 4.* Testing for COVID-19 may be limited in some countries; while individuals may be ill with COVID-19, the cases are neither tested nor reported.
 
 
 ## Examples of Previous Pandemics 
@@ -80,8 +74,6 @@ Complete the CDC’s training on Epidemic Curves, [here](https://www.cdc.gov/tra
 **Predict.** What do you predict would be the shape of the epi curve of the COVID-19 illness in a community? Draw your prediction and label your figure. 
 </div>
 
-##### Solution
-![An example of an epi curve](./Images/epicurve.jpg)  
 
 ## SIR Model  
 *Epidemiologists* and *disease ecologists* use models to help predict the spread of infectious diseases throughout a community or ecosystem. Using a **SER Model**, individuals are classified according to their disease status into the following categories:  
@@ -104,7 +96,9 @@ When does an individual move between the three categories? What determines the r
 
 ##### Solution
 An individual remains in the susceptible category until they are (1) exposed to the parasite and (2) infected by the parasite. The probability of exposure to the parasite and the probability of infection by the parasite will determine how quickly individuals in the S category move into the I category.  
+
 An individual remains in the infected category for the length of time that an individual is capable of transmitting the infection to susceptible individuals. This is known as the *infectious period*.   
+
 An individual moves from the infected category into the recovered category once the host’s immune system clears the infection.  
 
 ### SIR Model and the Whole Population  
@@ -121,8 +115,7 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 Under what conditions does the number of infected individuals increase and decrease?
 </div>
 
-##### Solution
-The number of infected individuals will increase if more individuals enter this category than leave this category. That is, more individuals are becoming infected than are recoverint. The number of infected individuals will decrease when more individuals are recovering than getting infected, usually because the pool of susceptible individuals has decreased.  
+
 
 ## Speed of Spread  
 
@@ -143,8 +136,6 @@ Model the spread of the COVID-19, beginning with a single infected individual an
 ![](./Images/r0exercise.png)
 </div>
 
-##### Solution  
-In the 5th generation there should be 16 infected individuals in the 5th generation.  
 
 
 #### Exercise 4 {.tabset .tabset-fade .tabset-pills}
@@ -157,11 +148,6 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 Make a prediction. Order the following diseases by their contagiousness (R0): COVID-19, Influenza, Measles, Bubonic Plague. Use the [MicrobeScope Application](https://informationisbeautiful.net/visualizations/the-microbescope-infectious-diseases-in-context/) to compare R0 of different diseases.  
 </div>
 
-##### Solution   
-R0 influenza = 1.53  
-R0 measles = 12-18  
-COVID-19 = 3.28  
-Plague = 3.5
 
 
 # Public Health Measures   
@@ -205,5 +191,3 @@ Using the SIR compartmental model and the 6 public health measures above, draw a
 ![](./Images/SIRcompartment.png) 
 </div>
 
-##### Solution 
-![](./Images/sirAnswer.png) 
