@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Module 2: Infectious Disease</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="customstyles.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+.tocify-subheader {
+  display: inline;
+}
+.tocify-subheader .tocify-item {
+  font-size: 0.95em;
+}
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-inverse  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">COVID-19 Lesson Plan</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="./intro_microbiology.html">Module 1: Microbiology</a>
+</li>
+<li>
+  <a href="./InfectiousDiseaseModule.html">Module 2: Infectious Disease</a>
+</li>
+<li>
+  <a href="./EpiUsingCovid19.html">Module 3: Epidemiology</a>
+</li>
+<li>
+  <a href="./GAstd.html">Georgia Education Standards</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://juliafrederick.github.io/Covid19LessonPlan/.">
+    <span class="fa fa-github fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Module 2: Infectious Disease</h1>
+
+</div>
+
+
+<div id="pathogens" class="section level1">
+<h1>Pathogens</h1>
+<p>A <em>pathogen</em> is an organism that causes disease to its host. The severity of the diease depends on the pathogens’ <em>virulence</em>. Pathogens are comprised of viruses, bacteria, unicellular and multicellular eukaryotes.</p>
+<p>There are two classifications of pathogens in Disease Ecology: microparasites and macroparasites. <em>Macroparasites</em> includes helminths, and arthropods; while, <em>microparasites</em> include bacteria, and viruses.</p>
+<p>Pathogens are further classified by their life cycle. A <em>facultative pathogen</em> is one that does not need the host in order to reproduce and complete their lifecycle; these pathogens are typically environmental bacteria and fungi. In contrast, an <em>obligate pathogen</em> needs a host to replicate and complete their life cycle.</p>
+<div id="question-1" class="section level4 tabset tabset-fade tabset-pills">
+<h4>Question 1</h4>
+<div id="question" class="section level5">
+<h5>Question</h5>
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class="blue">
+<p>Are viruses classifed as facultative or obligate pathogens? Why</p>
+</div>
+</div>
+<div id="solution" class="section level5">
+<h5>Solution</h5>
+<p>ALL viruses are an obligate pathogen because they need the host’s cellular machinery in order to reproduce</p>
+</div>
+</div>
+</div>
+<div id="microparasites" class="section level1">
+<h1>Microparasites</h1>
+<div id="bacteria" class="section level2">
+<h2>Bacteria</h2>
+<p>The majority of bacteria are non-disease causing, or <em>nonpathogenic</em>. Less than 1% of bacteria is capable of invading the human body and causing illness (<em>pathogenic</em>).</p>
+<p>However, when pathogenic bacteria are able to infect a host, a small battle ensues between the host’s immune system and the bacteria. The bacteria are trying to remain present and multiply, while the host is trying to prevent the bacteria from gaining access and reproducing. A host becomes <em>infected</em> when there is a persistance or multiplication of the pathogen on or within the host.</p>
+<p>Once a bacterium has infected the host, it is still in competition with the host’s normal flora to survive. One way bacteria can out compete the host’s normal flora is by producing toxic compounds that are harmful to the host. These compounds can cause vomiting, diarrhea, paralysis, pain, or fever. Bacteria can also enter the host’s cells and cause direct damage to the tissues during replication. The good news is that most illnesses caused by bacteria can be remedied with an antibiotic.</p>
+<div id="antibiotic-resistance-in-bacteria" class="section level3">
+<h3>Antibiotic Resistance in Bacteria</h3>
+<p>Antibiotics are used for preventing and treating infections caused by specific bacteria and are critical in combatting life-threatening infections. Bacteria are classified as <em>resistant</em> to antibiotics when they no longer respond to the antibiotics designed to kill them. There are many different ways that a bacterium can become antibiotic resistant. These mechanisms include random mutation or acquisition of new DNA from another bacterium or from bacteriophages (viruses that infect bacteria).</p>
+<div id="question-2" class="section level4 tabset tabset-fade tabset-pills">
+<h4>Question 2</h4>
+<div id="question-3" class="section level5">
+<h5>Question</h5>
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class="blue">
+<p>What are some methods suggested by public health officials to protect yourself against antibiotic resistance? You may want to use <a href="https://www.cdc.gov/antibiotic-use/index.html" class="uri">https://www.cdc.gov/antibiotic-use/index.html</a> as a reference.</p>
+</div>
+</div>
+<div id="solution-1" class="section level5">
+<h5>Solution</h5>
+<p>Protect yourself and your family from antibiotic resistance by doing your best to stay healthy and keep others healthy. This includes washing your hands, covering coughs, staying home when you’re feeling sick, and getting recommended vaccines and boosters, such as the flu vaccine. If you get sick, see a doctor! Never pressure them to give antibiotics. If you are prescribed antibiotics, take them exactly as the doctor recommends. Do not share antibiotics, save them for later, or take someone else’s.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="viruses" class="section level2">
+<h2>Viruses</h2>
+<p>The term <em>virus</em> was originally used to describe diseases of unknown origin because many epidemics were caused by viruses before anyone understood the nature of viruses themselves. Viruses are not able to reproduce independently and need to hijack the cellular machinery of their host in order to replicate.</p>
+<p>An important note is that viruses usually target one organism, however, all organisms (including other microbes) are capable of being infected by viruses. No matter what the host is, all viruses have the same basic life cycle. The only difference is that some viruses need to enter a host cell intact, while others disassemle and only the nucleic acid enters the cell. The structure of viruses is all relatively similar: a nucleic acid core surrounded by proteins. Viruses can be transmitted in a variety of ways:</p>
+<ul>
+<li><strong>Fecal-oral</strong>: pathogens in fecal matter of the host are passed to the mouth of another host.</li>
+<li><strong>Respiratory</strong>: pathogens in respiatory droplets generated through a host coughing, sneezing, or talking, reach a mucosal surface (eyes, nose, or mouth) of another host.<br />
+</li>
+<li><strong>Zoonotic</strong>: the pathogen is transmitted directly from an animal to humans through air, bites, or saliva. They can also go through an intermediate species (vector) that does not cause the disease just carries it from the animal to the human.<br />
+</li>
+<li><strong>Sexual contact</strong>: transmitted from one host to another during sexual contact. In the case of viruses, transmission is usually due to a pathogen getting into the partner’s blood stream through tears.</li>
+</ul>
+<table class="table table-striped table-hover" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Type.of.Transmission
+</th>
+<th style="text-align:left;">
+Example
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Fecal-oral
+</td>
+<td style="text-align:left;">
+Poliovirus, rotavirus
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Respiratory
+</td>
+<td style="text-align:left;">
+Influenza virus, measles virus
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Zoonotic
+</td>
+<td style="text-align:left;">
+Rabies virus, cowpox virus
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Sexual Contact
+</td>
+<td style="text-align:left;">
+HIV, HPV
+</td>
+</tr>
+</tbody>
+</table>
+<div id="question-3-1" class="section level4 tabset tabset-fade tabset-pills">
+<h4>Question 3</h4>
+<div id="question-4" class="section level5">
+<h5>Question</h5>
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class="blue">
+<p>Can you think of another example for each type of transmission?</p>
+<table class="table table-striped table-hover" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Type.of.Transmission
+</th>
+<th style="text-align:left;">
+Example
+</th>
+<th style="text-align:left;">
+Your.Example
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Fecal-oral
+</td>
+<td style="text-align:left;">
+Poliovirus, rotavirus
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Respiratory
+</td>
+<td style="text-align:left;">
+Influenza virus, measles virus
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Zoonotic
+</td>
+<td style="text-align:left;">
+Rabies virus, cowpox virus
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Sexual Contact
+</td>
+<td style="text-align:left;">
+HIV, HPV
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="solution-2" class="section level5">
+<h5>Solution</h5>
+<p>Fecal-oral includes Cholera, E. coli, Hepititis, Giardia, Tape Worms<br />
+Respiratory includes Covid, common cold<br />
+Zoonotic includes Lyme disease, malaria, anthrax, hantavirus, leptospirosis<br />
+Sexual Contact includes syphilis, herpes, hepititis.<br />
+This is not a complete list, this has some of the common ones on it. Some diseases can be transmitted through more than one route.</p>
+</div>
+</div>
+<div id="how-viruses-replicate" class="section level3">
+<h3>How Viruses Replicate</h3>
+<p>For DNA viruses, replication occurs in the nucleus of the cell. For RNA viruses, replication occurs in the cytoplasm. There are six general steps to replication, but the mechanisms vary by virus.</p>
+<ol style="list-style-type: decimal">
+<li>Attachment - receptors of the virus and host cell attach<br />
+</li>
+<li>Entry - virus penetrates the cell wall/membrane<br />
+</li>
+<li>Uncoating - virus releases its nucleic acid from the protein coating<br />
+</li>
+<li>Replication - the virus uses the host cell’s machinery to produce more viral nucleic acids and proteins.<br />
+</li>
+<li>Assembly - viral nucleic acids and proteins are assembled<br />
+</li>
+<li>Release - virus are released from the host cell. Typically destroying the host cell.</li>
+</ol>
+</div>
+<div id="how-viruses-cause-disease" class="section level3">
+<h3>How Viruses Cause Disease</h3>
+<p>There are two categories of infections caused by viruses: acute and persistent.</p>
+<p><em>Acute viral infections</em> remain localized and the signs of disease are short-lived. When the host cell’s are destroyed during the release stage of replication, there is accompanying cell and tissue damage. This damage will stimulate the host’s immune system and the viral infection will be remedied in a matter of days to months.</p>
+<p><em>Persistent viral infections</em> will survive within the host without any signs of disease. Some are the result of an acute infection that was not fully eliminated. Other persistent infections are referred to as <em>latent</em> because they have long non-infectious periods between the original disease and subsequent disease (e.g. herpes). A persistent infection can also result in continuous chronic infectious stages following a short disease stage.</p>
+<div id="question-4-1" class="section level4 tabset tabset-fade tabset-pills">
+<h4>Question 4</h4>
+<div id="question-5" class="section level5">
+<h5>Question</h5>
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class="blue">
+<p>Find an example of a virus that causes an acute viral infection. Find an example of a virus that causes a persistent viral infection.</p>
+</div>
+</div>
+<div id="solution-3" class="section level5">
+<h5>Solution</h5>
+<p>Acute (flu, mumps, measles). Persistent (HIV-&gt;AIDS, chicken pox -&gt; shingles)</p>
+</div>
+</div>
+</div>
+<div id="virulence" class="section level3">
+<h3>Virulence</h3>
+<p><em>Pathogenicity</em> describes the ability of a pathogen to cause disease, given infection in the host. <em>Virulence</em> describes the severity of a disease caused by the pathogen.</p>
+<p>From the pathogen’s perspective, it is important to balance the virulence with probability of tranmission. For example, pathogens transmitted through sexual contact wouldn’t want to be highly virulent because then the host will be too sick to go out, mate, and transmit the disease to a new host. Many viruses that are transmitted through sexual contact are mildly virulent, because of this.</p>
+<p>The level of virulence can also play a role in the transmission of a pathogen to a new host species. Viruses that are highly virulent have the potential to jump easily to a new host species. These <em>spillover events</em> can result in outbreaks and epidemics.</p>
+<p>Pathogen virulence is still not well understood. Scientists in disease ecology and epidemiology are learning more about how virulence changes over time and are working to predict the pathogen virulence of emerging, or new, diseases.</p>
+<div id="question-5-1" class="section level4 tabset tabset-fade tabset-pills">
+<h4>Question 5</h4>
+<div id="question-6" class="section level5">
+<h5>Question</h5>
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class="blue">
+<p>For each route of transmission (fecal-oral, respiratory, zoonotic, and sexual contact) what level of virulence do you think those pathogens would typically want to have? Why?</p>
+</div>
+</div>
+<div id="solution-4" class="section level5">
+<h5>Solution</h5>
+<p>The optimal virulence for all pathogens is moderate virulence. Pathogens that are moderately virulent may replicate readily in the host, but do not cause a severe disease. A severe disease may prevent transmission to new hosts. If a person is too sick, they may keep inside and away from new hosts.</p>
+<p>Overall, there isn’t a single correct answer. This is an exercise to the get the student thinking about virulence from the perspective of the pathogen instead of the host.</p>
+</div>
+</div>
+</div>
+<div id="mutations" class="section level3">
+<h3>Mutations</h3>
+<p>RNA viruses are known to use all known mechanisms of genetic variation to ensure survival. This constant genetic variation makes it hard for the host’s immune system to detect the virus. A single host may have multiple versions of the pathogen at once; this can overwhlem the immune system.</p>
+<p>Hallmarks of viral replication are: high mutation rates, high yields, and short replication times. This can even make medical interventions, like vaccines, hard to develop because the target pathogen is always changing.</p>
+<p>A classic example of viral replication is HIV. A single cell infected with the HIV virus is capable of producing 10,000 new HIV viruses, each having 9,749 bases in their genome.</p>
+<div id="question-6-1" class="section level4 tabset tabset-fade tabset-pills">
+<h4>Question 6</h4>
+<div id="question-7" class="section level5">
+<h5>Question</h5>
+<style>
+div.yellow { background-color:#FAED8E; border-radius: 5px; padding: 20px;}
+</style>
+<div class="yellow">
+<p>Given that there are 0.0003 mutations/base/round of replication in HIV. What is the average number of mutations in a single replication?</p>
+</div>
+</div>
+<div id="solution-5" class="section level5">
+<h5>Solution</h5>
+<p>0.0003 * 9749 = 2.9247 (average number of mutations in a single replication)</p>
+</div>
+</div>
+<div id="question-7-1" class="section level4 tabset tabset-fade tabset-pills">
+<h4>Question 7</h4>
+<div id="question-8" class="section level5">
+<h5>Question</h5>
+<style>
+div.yellow { background-color:#FAED8E; border-radius: 5px; padding: 20px;}
+</style>
+<div class="yellow">
+<p>How many mutations across all replicates come from a single infected cell?</p>
+</div>
+</div>
+<div id="solution-6" class="section level5">
+<h5>Solution</h5>
+<p>2.9247 * 10000 = 29,247 mutations</p>
+</div>
+</div>
+<div id="question-8-1" class="section level4 tabset tabset-fade tabset-pills">
+<h4>Question 8</h4>
+<div id="question-9" class="section level5">
+<h5>Question</h5>
+<style>
+div.yellow { background-color:#FAED8E; border-radius: 5px; padding: 20px;}
+</style>
+<div class="yellow">
+<p>Knowing that the mutation rate is 0.0003 mutations/base/round, what percent of the 10,000 new HIV viruses will have at least 1 mutation in the envelope gene that is typically the target for host’s immune system and for vaccines? (the envelope gene is 2,598 bases long)</p>
+</div>
+</div>
+<div id="solution-7" class="section level5">
+<h5>Solution</h5>
+<p>0.0003 * 2,598 = 0.7794 proportion of mutations per replicate<br />
+0.7794 * 10000 = 7794 replicates will have a mutation in the envelope protein<br />
+(7794 / 10000) * 100 = 77.94% of virion produced will have at least 1 mutation in the envelope</p>
+</div>
+</div>
+<div id="question-9-1" class="section level4 tabset tabset-fade tabset-pills">
+<h4>Question 9</h4>
+<div id="question-10" class="section level5">
+<h5>Question</h5>
+<style>
+div.yellow { background-color:#FAED8E; border-radius: 5px; padding: 20px;}
+</style>
+<div class="yellow">
+<p>Seeing the mutation rate of HIV and HIV’s envelope protein, why do you think it has been difficult to create a cure for HIV?</p>
+</div>
+</div>
+<div id="solution-8" class="section level5">
+<h5>Solution</h5>
+<p>The mutation rate for the virus is very high, with each replicate have almost 3 mutation, and typically one occuring in the envelope protein that is what the cure (like a vaccine) would target. Each person’s immune system is likely have trouble being able to detect all of the different variants, creating a vaccine that is able to target all of the variants across all people is a huge undertaking.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = false;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

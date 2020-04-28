@@ -1,0 +1,14 @@
+title: "COVID-19 Lesson Plan"
+type: inverse
+left:
+  - text: "Module 1: Microbiology"
+    href: ./intro_microbiology.html
+  - text: "Module 2: Infectious Disease"
+    href: ./InfectiousDiseaseModule.html
+  - text: "Module 3: Epidemiology"
+    href: ./EpiUsingCovid19.html
+  - text: "Georgia Education Standards"
+    href: ./GAstd.html
+right:
+  - icon: fa-github fa-lg
+    href: https://juliafrederick.github.io/Covid19LessonPlan/.

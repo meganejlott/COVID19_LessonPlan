@@ -1,0 +1,14 @@
+---
+title: "COVID-19: Microbiology, Infectious Disease and Epidemiology"
+output: 
+  html_document:
+    toc: FALSE
+---
+
+This is a three module lesson plan that covers *microbiology*, *infectious disease*, and *epidemiology* through the lens of COVID-19. These lesson plans are designed for Georgia high school students (grades 9-12), but may be suitable for middle school students. The content is designed by Megan Lott and Julia Frederick. Two PhD students in the college of Public Health, department of Environmental Health Science at the University of Georiga.  
+
+You can find the Georgia Education Standards associated with these three modules in one of the tabs above.  
+
+If you have any questions please reach out to us at megan.lott@uga.edu or julia.frederick@uga.edu. We are happy to help!  
+
+![](./Images/publicHealthlogo.png)

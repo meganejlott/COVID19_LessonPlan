@@ -1,2 +1,2 @@
-# COVID19_LessonPlan
-Online Lesson for Georgia High School Students, focused on COVID19
+# COVID_LessonPlan
+https://meganejlott.github.io/COVID19_LessonPlan/.

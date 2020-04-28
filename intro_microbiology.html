@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Module 1: Introduction to Microbiology</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="customstyles.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+.tocify-subheader {
+  display: inline;
+}
+.tocify-subheader .tocify-item {
+  font-size: 0.95em;
+}
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-inverse  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">COVID-19 Lesson Plan</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="./intro_microbiology.html">Module 1: Microbiology</a>
+</li>
+<li>
+  <a href="./InfectiousDiseaseModule.html">Module 2: Infectious Disease</a>
+</li>
+<li>
+  <a href="./EpiUsingCovid19.html">Module 3: Epidemiology</a>
+</li>
+<li>
+  <a href="./GAstd.html">Georgia Education Standards</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://juliafrederick.github.io/Covid19LessonPlan/.">
+    <span class="fa fa-github fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Module 1: Introduction to Microbiology</h1>
+
+</div>
+
+
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<p>Microorganisms are found almost everywhere on the planet. Due to the incredible amount of microbial diversity, microbes have evolved to live along the deep-sea floor, among soils and roots, and even inside you!</p>
+<p>Microbes are essential to life; they serve fundamental roles in our ecosystem and are critically important for nutrient cycling. As primary producers, some microbes generate energy through photosynthesis or chemosynthesis. Nitrogen-fixing microbes remove nitrogen from the atmosphere and transform it into forms useable by other organisms. Some microbes are decomposers; they breakdown organic material and release nutrients into the environment.</p>
+<div class="figure">
+<img src="Images/ocean_microbes.png" alt="Microbes are found across every niche and are essential to life!" />
+<p class="caption">Microbes are found across every niche and are essential to life!</p>
+</div>
+<p>Most microbes in the environment are harmless or beneficial, but a small portion of microbes can cause disease. By understanding functions and characteristics of microbes, we may be better able to understand and control the spread of disease.</p>
+</div>
+<div id="what-are-microbes" class="section level1">
+<h1>What are Microbes?</h1>
+<p>A microorganism, or microbe, is any organism that is too small to be seen by the eyes alone. This includes viruses, bacteria, protozoans, and fungi.</p>
+<div class="figure">
+<img src="Images/example_microbes.png" />
+
+</div>
+<div id="exercise-1" class="section level4 tabset tabset-fade tabset-pills">
+<h4>Exercise 1</h4>
+<div id="exercise" class="section level5">
+<h5>Exercise</h5>
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class="blue">
+<p>Make a prediction. List the following items from largest to smallest:</p>
+<ol style="list-style-type: upper-alpha">
+<li><p>Coffee Bean</p></li>
+<li><p><em>E. coli</em> Bacteria</p></li>
+<li><p>Skin Cell</p></li>
+<li><p>Mitochondria</p></li>
+<li><p>Viruses</p></li>
+<li><p>Grain of Salt</p></li>
+</ol>
+<p>Assess your prediction using the <a href="https://learn.genetics.utah.edu/content/cells/scale/">Cell Size and Scale Tool</a>.</p>
+</div>
+</div>
+<div id="solution" class="section level5">
+<h5>Solution</h5>
+<p>A, F, C, D, B, E</p>
+<div class="figure">
+<img src="Images/kingdoms_microbes.png" alt="Microorganisms do not belong to only one kingdom; instead, there are a diversity of microorganisms found across each kingdom." />
+<p class="caption">Microorganisms do not belong to only one kingdom; instead, there are a diversity of microorganisms found across each kingdom.</p>
+</div>
+</div>
+</div>
+<div id="exercise-2" class="section level4 tabset tabset-fade tabset-pills">
+<h4>Exercise 2</h4>
+<div id="exercise-3" class="section level5">
+<h5>Exercise</h5>
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class="blue">
+<p>Distinguish between different kinds of microorganisms based on cellular structure. Visit the <a href="https://askabiologist.asu.edu/cell-viewer-game/">Cell Anatomy Viewer</a>. Explore the cellular structure of the Animal, Plant, Fungus, and Bacterium. Play the Cell Parts ID Game until you can complete the “Expert Level.” Then, fill in create a chart or diagram to compare the cellular structures, using the terms below.</p>
+<div class="figure">
+<img src="Images/terms.png" alt="Terms." />
+<p class="caption">Terms.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="bacteria" class="section level1">
+<h1>Bacteria</h1>
+<p>Bacteria are single-celled microbes that are found in diverse environments. The more we look, the more places we find them!</p>
+<p>Bacteria are categorized by their shape and structure. You have learned that bacterial cells have both a cell membrane and a cell wall. Bacteria are either Gram-positive or Gram-negative based on the structure of their cell wall.</p>
+<div class="figure">
+<img src="Images/gram_stain.png" alt="Comparison of Gram-positive bacteria to Gram-negative bacteria." />
+<p class="caption">Comparison of Gram-positive bacteria to Gram-negative bacteria.</p>
+</div>
+<div id="question-1" class="section level4 tabset tabset-fade tabset-pills">
+<h4>Question 1</h4>
+<div id="question" class="section level5">
+<h5>Question</h5>
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class="blue">
+<p>Based on the figure above, what are the key differences between Gram-positive and Gram-negative bacteria?</p>
+</div>
+</div>
+<div id="solution-1" class="section level5">
+<h5>Solution</h5>
+<p>Gram-positive bacteria have a thick cell wall that is composed of peptidoglycan. Gram-negative bacteria have a cell wall that is composed of a thin layer of peptidoglycan, surrounded by an outer membrane and lipopolysaccharaides.</p>
+<p>There are three basic shapes of bacteria: bacillus (rod-shaped), coccus (spherical), and spirochete (spiral).</p>
+<div class="figure">
+<img src="Images/bacterial_shapes.png" alt="Common shapes of bacteria." />
+<p class="caption">Common shapes of bacteria.</p>
+</div>
+</div>
+</div>
+<div id="exercise-3-1" class="section level4 tabset tabset-fade tabset-pills">
+<h4>Exercise 3</h4>
+<div id="exercise-4" class="section level5">
+<h5>Exercise</h5>
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class="blue">
+<p>Bacteria are classified as Gram-positive or Gram-negative by the results of the <em>Gram stain method</em>, or <em>Gram’s method</em>. Visit the <a href="http://learn.chm.msu.edu/vibl/content/gramstain/gramstain/index.html">Gram Stain Virtual Lab</a>. Read the description of the gram stain method and the steps of the method.</p>
+<p>The image below is a microscopic image of a culture of <em>Staphylococcus aureus</em>. What is the gram stain of the bacteria? What is the shape of the bacteria?</p>
+<div class="figure">
+<img src="Images/staph.png" alt="View of Staphylococcus aureus through the microscope, after Gram-stain." />
+<p class="caption">View of <em>Staphylococcus aureus</em> through the microscope, after Gram-stain.</p>
+</div>
+</div>
+</div>
+<div id="solution-2" class="section level5">
+<h5>Solution</h5>
+<p><em>Staphylococcus aureus</em> is a gram-positive coccus.</p>
+</div>
+</div>
+</div>
+<div id="viruses" class="section level1">
+<h1>Viruses</h1>
+<p>Viruses are the smallest microbes and must infect a host cell in order to survive and replicate. These host cells may be cells from humans, plants, animals, or other microorganisms.</p>
+<div class="figure">
+<img src="Images/examples_viruses.png" alt="Examples of viruses. (a) The SARS-CoV02 virus infects and replicates inside human and animal cells, (b) The Tobacco Mosaic Virus infects and replicates inside a wide range of plants, especially tobacco, (c) The bacteriophage virus infects and replicates inside bacterial cell hosts." />
+<p class="caption">Examples of viruses. (a) The SARS-CoV02 virus infects and replicates inside human and animal cells, (b) The Tobacco Mosaic Virus infects and replicates inside a wide range of plants, especially tobacco, (c) The bacteriophage virus infects and replicates inside bacterial cell hosts.</p>
+</div>
+<p>Watch a virus in action, <a href="https://youtu.be/-w4C74cu6dk?t=30">here</a>! In this animation, a bacteriophage virus infects an <em>E. coli</em> host cell. The step-by-step infection is explained <a href="https://www.technologynetworks.com/immunology/videos/bacteriophage-a-virus-that-infects-microbes-311475">here</a>.</p>
+<div id="are-viruses-alive" class="section level2">
+<h2>Are viruses alive?</h2>
+<p>This is a common debate, even among scientists!</p>
+<p>Viruses are acellular, meaning that they do not have a cellular structure. Instead, viruses have genetic material that is protected by a protein coat.</p>
+<p>In order to reproduce, viruses must infect and hijack their host’s cell or cells in order to replicate their own genetic material. Viruses use the host’s cellular machinery, metabolism, and nutrition in order to replicate.</p>
+<p>Some viruses may respond to conditions in the host’s cell. For example, if a bacteriophage virus enters a host cell, the virus may enter a stage of virulent infection, known as the <em>lytic cycle</em>. During the lytic cycle, the virus will hijack the hosts’ machinery immediately. The virus will replicate and then will lyse, or burst, the host’s cell.</p>
+<p>In contrast, a bacteriophage virus may ‘decide’ to remain in a dormant inside the host’s cell. In this case, the virus may enter the <em>lysogenic cycle</em>, where the viral DNA may replicate but will not burst the host’s cell. If the host’s cell encounters an environmental stressor, the virus may then transition into the lytic cycle, replicating and lysing the host cell.</p>
+<div class="figure">
+<img src="Images/lytic_lysogenic.png" alt="Lytic Vs. Lysogenic Cycles of Bacteriophage" />
+<p class="caption">Lytic Vs. Lysogenic Cycles of Bacteriophage</p>
+</div>
+</div>
+<div id="virus-structure" class="section level2">
+<h2>Virus Structure</h2>
+<p>All viruses are composed of genetic material and a protein coat, but viruses may take many different forms and structures. Viruses are classified according to their composition and structure, including their genetic material, their physical shape, and their outer coating.</p>
+<p><strong>Genetic Material.</strong> Viruses may use DNA or RNA for their genetic material. This material may be double-stranded or single-stranded.</p>
+<p><strong>Physical Shape.</strong> Viruses are classified according to their geometric shape as either helical, polyhedral, spherical, or complex.</p>
+<p><strong>Outer Coating.</strong> All viruses have a protein coat. Enveloped viruses also have a lipid bilayer membrane and glycoproteins. Non-enveloped viruses have only a protein coat, but, non-enveloped viruses are more <em>persistent</em>, or hardy, in the environment.</p>
+<div class="figure">
+<img src="Images/compare_viruses.png" alt="Comparison of four different viruses, based on shape, genetic material, and outer coating." />
+<p class="caption">Comparison of four different viruses, based on shape, genetic material, and outer coating.</p>
+</div>
+</div>
+</div>
+<div id="wrap-up-exercise" class="section level1">
+<h1>Wrap-Up Exercise</h1>
+<div id="exercise-4-1" class="section level4 tabset tabset-fade tabset-pills">
+<h4>Exercise 4</h4>
+<div id="exercise-5" class="section level5">
+<h5>Exercise</h5>
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class = "blue">
+<p>How do viruses compare to other microorganisms? Generate a table to compare viruses to other microorganisms based on size, genetic material, structure, and reproduction.</p>
+</div>
+<div id="solution-3" class="section level5">
+<h5>Solution</h5>
+<div class="figure">
+<img src="Images/virus_table.PNG" alt="Comparison between viruses and other microorganisms." />
+<p class="caption">Comparison between viruses and other microorganisms.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = false;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

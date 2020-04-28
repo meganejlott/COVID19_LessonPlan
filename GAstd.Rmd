@@ -1,0 +1,88 @@
+---
+title: "Georgia Education Standards"
+output: html_document
+---
+
+## Module 1: Introduction to Microbiology  
+
+##### **SMI2. Obtain, evaluate, and communicate information to differentiate among types of
+microorganisms based on defining characteristics.**   
+
+  a. Develop and use models to distinguish between different kinds of microorganisms
+(Prokaryotes and Eukaryotes) based on cellular structure (including but not limited to, cell
+wall, cell membrane, organelles, cilia, and flagella), molecular biology (plasmids, DNA,
+RNA and proteins), and biochemical composition (lipids, proteins, and carbohydrates).  
+  b. Construct explanations of how viruses differ from other cellular parasites.  
+  c. Construct explanations for the relative sizes and different types of cell shapes of
+microorganisms.  
+  d. Plan and carry out investigations to explore various methods used to visualize
+microorganisms.  
+
+##### **SMI3. Obtain, evaluate, and communicate information to examine the structural
+components of prokaryotic and eukaryotic microorganisms and their functions.**  
+
+  c. Develop and use models to demonstrate how internal organization differs between prokaryotes
+and eukaryotes and explain the functions of internal structures.  
+
+## Module 2: Infectious Diseases  
+
+##### **SMI8. Obtain, evaluate, and communicate information to examine relationships among
+microbes and other organisms.**   
+
+  c. Ask questions to gather and communicate information about how pathogenic microbes cause
+disease in humans and other organisms  
+
+##### **SMI5. Obtain, evaluate, and communicate information regarding the molecular
+mechanisms underlying DNA replication, gene expression (transcription and translation),
+and genetic variation, in microbes.**  
+
+  c. Construct explanations on how genetic variations in microbes arise due to mutations and gene
+transfer (via transformation, transduction, and/or conjugation) and how these genetic variations
+affect survival and functioning of prokaryotes.  
+  e. Construct an explanation of how genetic variation can lead to microbial evolution and
+ultimately how this information impacts modern biotechnological applications.  
+
+
+##### **SMI6. Obtain, evaluate, and communicate information to determine parameters
+affecting prokaryotic microbial growth, ways of controlling microbial growth and how
+microorganisms respond to control mechanisms.**  
+
+  e. Ask questions and define problems related to how the use of antimicrobials influences the
+evolution of resistant pathogens via genetic changes in the population (e.g., the evolution of
+multi-drug resistant bacteria, treatment resistant HIV, or viral recombination)  
+
+##### **SEPI1. Obtain, evaluate, and communicate information to understand and analyze the
+disease process.**  
+
+  d. Construct an argument from evidence to explain how the rapid evolution of pathogens results
+in diseases that will continue to be a public health concern. (Clarification statement: Instruction
+should include an emphasis on the importance of antibiotic resistance from both domestic and
+global perspectives).  
+
+## Module 3: Epidemiology  
+
+##### **SEPI1. Obtain, evaluate, and communicate information to understand and analyze the
+disease process.**    
+
+  a. Obtain, evaluate and communicate information about the history and uses of epidemiology. (Clarification statement: This element is intended to include scientists, public health
+organizations and scientific breakthroughs.)   
+  b. Ask questions about diseases and pathogens that cause them.   
+  e. Develop and use models to explain the different modes of disease transmission and how timing of
+exposure during the disease process affects spread of disease.  
+
+##### **SEPI2. Obtain, evaluate, and communicate information to identify and formulate
+hypotheses about patterns of health and disease.**  
+
+  a. Analyze and interpret data focusing on the amount, distribution and patterns of disease
+within a population by person, place and time. (Clarification statement: Instruction should focus on the amounts, distributions and patterns from local and global perspectives).  
+  b. Use models that are based on empirical evidence to identify patterns of health and disease to
+characterize a public health problem.  
+
+##### **MAMDM.D.2. Students will build the skills and vocabulary necessary to analyze and
+critique reported statistical information, summaries, and graphical displays.**  
+
+##### **MMIG.PD.4 Students will use computer simulations to make decisions.**  
+ 
+  a. Use technology to simulate a real-world situation.  
+  b. Analyze, evaluate, and interpret results.  
+  c. Examine alternate decisions in response to contextual changes.  

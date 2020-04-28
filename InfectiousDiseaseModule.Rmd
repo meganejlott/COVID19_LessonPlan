@@ -1,0 +1,216 @@
+---
+title: "Module 2: Infectious Disease"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(knitr)
+library(kableExtra)
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Pathogens  
+A *pathogen* is an organism that causes disease to its host. The severity of the diease depends on the pathogens' *virulence*. Pathogens are comprised of viruses, bacteria, unicellular and multicellular eukaryotes. 
+
+There are two classifications of pathogens in Disease Ecology: microparasites and macroparasites. *Macroparasites* includes helminths, and arthropods; while, *microparasites* include bacteria, and viruses. 
+
+Pathogens are further classified by their life cycle. A *facultative pathogen* is one that does not need the host in order to reproduce and complete their lifecycle; these pathogens are typically environmental bacteria and fungi. In contrast, an *obligate pathogen* needs a host to replicate and complete their life cycle.  
+
+#### Question 1 {.tabset .tabset-fade .tabset-pills}
+
+##### Question
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class = "blue">
+Are viruses classifed as facultative or obligate pathogens? Why
+</div>  
+
+##### Solution
+ALL viruses are an obligate pathogen because they need the host's cellular machinery in order to reproduce  
+    
+# Microparasites  
+
+## Bacteria  
+The majority of bacteria are non-disease causing, or *nonpathogenic*. Less than 1% of bacteria is capable of invading the human body and causing illness (*pathogenic*). 
+
+However, when pathogenic bacteria are able to infect a host, a small battle ensues between the host's immune system and the bacteria. The bacteria are trying to remain present and multiply, while the host is trying to prevent the bacteria from gaining access and reproducing. A host becomes *infected* when there is a persistance or multiplication of the pathogen on or within the host. 
+
+Once a bacterium has infected the host, it is still in competition with the host's normal flora to survive. One way bacteria can out compete the host's normal flora is by producing toxic compounds that are harmful to the host. These compounds can cause vomiting, diarrhea, paralysis, pain, or fever. Bacteria can also enter the host's cells and cause direct damage to the tissues during replication. The good news is that most illnesses caused by bacteria can be remedied with an antibiotic.  
+
+### Antibiotic Resistance in Bacteria  
+Antibiotics are used for preventing and treating infections caused by specific bacteria and are critical in combatting life-threatening infections. Bacteria are classified as *resistant* to antibiotics when they no longer respond to the antibiotics designed to kill them. There are many different ways that a bacterium can become antibiotic resistant. These mechanisms include random mutation or acquisition of new DNA from another bacterium or  from bacteriophages (viruses that infect bacteria).   
+
+#### Question 2 {.tabset .tabset-fade .tabset-pills}
+
+##### Question
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class = "blue">
+What are some methods suggested by public health officials to protect yourself against antibiotic resistance? You may want to use https://www.cdc.gov/antibiotic-use/index.html as a reference.
+</div>   
+
+##### Solution  
+Protect yourself and your family from antibiotic resistance by doing your best to stay healthy and keep others healthy. This includes washing your hands, covering coughs, staying home when you're feeling sick, and getting recommended vaccines and boosters, such as the flu vaccine. If you get sick, see a doctor! Never pressure them to give antibiotics. If you are prescribed antibiotics, take them exactly as the doctor recommends. Do not share antibiotics, save them for later, or take someone else's.  
+    
+## Viruses  
+The term *virus* was originally used to describe diseases of unknown origin because many epidemics were caused by viruses before anyone understood the nature of viruses themselves. Viruses are not able to reproduce independently and need to hijack the cellular machinery of their host in order to replicate. 
+
+An important note is that viruses usually target one organism, however, all organisms (including other microbes) are capable of being infected by viruses. No matter what the host is, all viruses have the same basic life cycle. The only difference is that some viruses need to enter a host cell intact, while others disassemle and only the nucleic acid enters the cell. The structure of viruses is all relatively similar: a nucleic acid core surrounded by proteins. Viruses can be transmitted in a variety of ways:  
+
++ **Fecal-oral**: pathogens in fecal matter of the host are passed to the mouth of another host. 
++ **Respiratory**: pathogens in respiatory droplets generated through a host coughing, sneezing, or talking, reach a mucosal surface (eyes, nose, or mouth) of another host.   
++ **Zoonotic**: the pathogen is transmitted directly from an animal to humans through air, bites, or saliva. They can also go through an intermediate species (vector) that does not cause the disease just carries it from the animal to the human.  
++ **Sexual contact**: transmitted from one host to another during sexual contact. In the case of viruses, transmission is usually due to a pathogen getting into the partner's blood stream through tears.  
+
+```{r transmission examples, echo=FALSE}
+TransEX <- data.frame("Type of Transmission" = c("Fecal-oral","Respiratory", "Zoonotic",
+                                                "Sexual Contact"), 
+                                                "Example" = c("Poliovirus, rotavirus", "Influenza virus, measles virus", "Rabies virus, cowpox virus", "HIV, HPV"))
+TransEX %>% kable() %>% kable_styling(bootstrap_options = c("striped","hover"),
+                                      full_width = F)
+```
+
+#### Question 3 {.tabset .tabset-fade .tabset-pills}
+
+##### Question
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class = "blue">
+Can you think of another example for each type of transmission?
+
+```{r transmissionfillexamples, echo=FALSE}
+TransEX <- data.frame("Type of Transmission" = c("Fecal-oral","Respiratory", "Zoonotic",
+                                                "Sexual Contact"), 
+                                                "Example" = c("Poliovirus, rotavirus", "Influenza virus, measles virus", "Rabies virus, cowpox virus", "HIV, HPV"), "Your Example" = c("", "", "", ""))
+TransEX %>% kable() %>% kable_styling(bootstrap_options = c("striped","hover"),
+                                      full_width = F)
+```
+</div>  
+
+##### Solution  
+Fecal-oral includes Cholera, E. coli, Hepititis, Giardia, Tape Worms  
+Respiratory includes Covid, common cold  
+Zoonotic includes Lyme disease, malaria, anthrax, hantavirus, leptospirosis  
+Sexual Contact includes syphilis, herpes, hepititis.  
+This is not a complete list, this has some of the common ones on it. Some diseases can be transmitted through more than one route.
+
+### How Viruses Replicate  
+For DNA viruses, replication occurs in the nucleus of the cell. For RNA viruses, replication occurs in the cytoplasm. There are six general steps to replication, but the mechanisms vary by virus.  
+
+  1. Attachment - receptors of the virus and host cell attach  
+  2. Entry - virus penetrates the cell wall/membrane  
+  3. Uncoating - virus releases its nucleic acid from the protein coating  
+  4. Replication - the virus uses the host cell's machinery to produce more viral nucleic acids and proteins.  
+  5. Assembly - viral nucleic acids and proteins are assembled  
+  6. Release - virus are released from the host cell. Typically destroying the host cell.  
+  
+### How Viruses Cause Disease  
+
+There are two categories of infections caused by viruses: acute and persistent. 
+
+*Acute viral infections* remain localized and the signs of disease are short-lived. When the host cell's are destroyed during the release stage of replication, there is accompanying cell and tissue damage. This damage will stimulate the host's immune system and the viral infection will be remedied in a matter of days to months. 
+
+*Persistent viral infections* will survive within the host without any signs of disease. Some are the result of an acute infection that was not fully eliminated. Other persistent infections are referred to as *latent* because they have long non-infectious periods between the original disease and subsequent disease (e.g. herpes). A persistent infection can also result in continuous chronic infectious stages following a short disease stage.  
+
+#### Question 4 {.tabset .tabset-fade .tabset-pills}
+
+##### Question
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class = "blue">
+Find an example of a virus that causes an acute viral infection. Find an example of a virus that causes a persistent viral infection.
+</div>   
+
+##### Solution  
+Acute (flu, mumps, measles). Persistent (HIV->AIDS, chicken pox -> shingles)  
+
+### Virulence  
+
+*Pathogenicity* describes the ability of a pathogen to cause disease, given infection in the host. *Virulence* describes the severity of a disease caused by the pathogen.
+
+From the pathogen's perspective, it is important to balance the virulence with probability of tranmission. For example, pathogens transmitted through sexual contact wouldn't want to be highly virulent because then the host will be too sick to go out, mate, and transmit the disease to a new host. Many viruses that are transmitted through sexual contact are mildly virulent, because of this. 
+
+The level of virulence can also play a role in the transmission of a pathogen to a new host species. Viruses that are highly virulent have the potential to jump easily to a new host species. These _spillover events_ can result in outbreaks and epidemics.
+
+Pathogen virulence is still not well understood. Scientists in disease ecology and epidemiology are learning more about how virulence changes over time and are working to predict the pathogen virulence of emerging, or new, diseases.   
+
+#### Question 5 {.tabset .tabset-fade .tabset-pills}
+
+##### Question
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class = "blue">
+For each route of transmission (fecal-oral, respiratory, zoonotic, and sexual contact) what level of virulence do you think those pathogens would typically want to have? Why?
+</div>   
+
+##### Solution  
+The optimal virulence for all pathogens is moderate virulence. Pathogens that are moderately virulent may replicate readily in the host, but do not cause a severe disease. A severe disease may prevent transmission to new hosts. If a person is too sick, they may keep inside and away from new hosts. 
+
+Overall, there isn't a single correct answer. This is an exercise to the get the student thinking about virulence from the perspective of the pathogen instead of the host.  
+    
+### Mutations  
+
+RNA viruses are known to use all known mechanisms of genetic variation to ensure survival. This constant genetic variation makes it hard for the host's immune system to detect the virus. A single host may have multiple versions of the pathogen at once; this can overwhlem the immune system. 
+
+Hallmarks of viral replication are: high mutation rates, high yields, and short replication times. This can even make medical interventions, like vaccines, hard to develop because the target pathogen is always changing. 
+
+A classic example of viral replication is HIV. A single cell infected with the HIV virus is capable of producing 10,000 new HIV viruses, each having 9,749 bases in their genome.  
+
+#### Question 6 {.tabset .tabset-fade .tabset-pills}
+
+##### Question
+<style>
+div.yellow { background-color:#FAED8E; border-radius: 5px; padding: 20px;}
+</style>
+<div class = "yellow">
+Given that there are 0.0003 mutations/base/round of replication in HIV. What is the average number of mutations in a single replication?
+</div>   
+
+##### Solution  
+0.0003 * 9749 = 2.9247 (average number of mutations in a single replication) 
+
+#### Question 7 {.tabset .tabset-fade .tabset-pills}
+
+##### Question
+<style>
+div.yellow { background-color:#FAED8E; border-radius: 5px; padding: 20px;}
+</style>
+<div class = "yellow">
+How many mutations across all replicates come from a single infected cell?
+</div>  
+
+##### Solution  
+2.9247 * 10000 = 29,247 mutations
+
+#### Question 8 {.tabset .tabset-fade .tabset-pills}
+
+##### Question
+<style>
+div.yellow { background-color:#FAED8E; border-radius: 5px; padding: 20px;}
+</style>
+<div class = "yellow">
+Knowing that the mutation rate is 0.0003 mutations/base/round, what percent of the 10,000 new HIV viruses will have at least 1 mutation in the envelope gene that is typically the target for host's immune system and for vaccines? (the envelope gene is 2,598 bases long)  
+</div>   
+
+##### Solution  
+0.0003 * 2,598 = 0.7794 proportion of mutations per replicate  
+  0.7794 * 10000 = 7794 replicates will have a mutation in the envelope protein  
+  (7794 / 10000) * 100 = 77.94% of virion produced will have at least 1 mutation in the envelope 
+
+#### Question 9 {.tabset .tabset-fade .tabset-pills}
+
+##### Question
+<style>
+div.yellow { background-color:#FAED8E; border-radius: 5px; padding: 20px;}
+</style>
+<div class = "yellow">
+Seeing the mutation rate of HIV and HIV's envelope protein, why do you think it has been difficult to create a cure for HIV?
+</div>   
+
+##### Solution
+The mutation rate for the virus is very high, with each replicate have almost 3 mutation, and typically one occuring in the envelope protein that is what the cure (like a vaccine) would target. Each person's immune system is likely have trouble being able to detect all of the different variants, creating a vaccine that is able to target all of the variants across all people is a huge undertaking. 
